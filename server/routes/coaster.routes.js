@@ -1,6 +1,6 @@
+const router = require("express").Router()
 const Coaster = require("../models/Coaster.model")
 
-const router = require("express").Router()
 
 router.get("/allCoasters", (req, res) => {
   Coaster.find()

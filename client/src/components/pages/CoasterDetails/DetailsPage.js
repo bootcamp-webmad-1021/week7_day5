@@ -30,25 +30,27 @@ class CoasterDetails extends Component {
   }
 
   render() {
+    const { title, description, inversions, length, imageUrl } = this.state
+
     return (
       <Container>
         <h1>Detalles</h1>
 
-        <Row>
-          <Col>
+        <Row className="justify-content-around">
+          <Col md={6} style={{ overflow: "hidden" }}>
             <article>
-              <h2>{this.state.title}</h2>
+              <h2>{title}</h2>
               <div>
-                <p>{this.state.description}</p>
+                <p>{description}</p>
                 <hr />
                 <br />
-                <p>Nº de Inversiones: {this.state.inversions}</p>
-                <p>Longitud: {this.state.length}</p>
+                <p>Nº de Inversiones: {inversions}</p>
+                <p>Longitud: {length}</p>
               </div>
             </article>
           </Col>
-          <Col>
-            <img src={this.state.imageUrl} alt={this.state.title} ></img>
+          <Col md={4}>
+            <img src={imageUrl} alt={title} ></img>
           </Col>
         </Row>
       </Container >
